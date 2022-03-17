@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartController">
+   <children>
+      <Label layoutX="29.0" layoutY="20.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="238.0" layoutY="83.0" prefHeight="235.0" prefWidth="125.0" spacing="10.0">
+         <children>
+            <TextField fx:id="addPartIDTF" disable="true" editable="false" prefWidth="100.0" promptText="Auto Gen - Disabled">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="addPartNameTF" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="addPartInvTF" layoutX="10.0" layoutY="45.0" />
+            <TextField fx:id="addPartPriceTF" layoutX="10.0" layoutY="45.0" />
+            <TextField fx:id="addPartMinTF" layoutX="10.0" layoutY="80.0" />
+            <TextField fx:id="addPartMaxTF" layoutX="10.0" layoutY="80.0" />
+            <TextField fx:id="addPartMachineIDTF" layoutX="10.0" layoutY="115.0" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="104.0" layoutY="83.0" prefHeight="235.0" prefWidth="125.0" spacing="10.0">
+         <children>
+            <Label prefHeight="25.0" text="ID" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" text="Name" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" text="Inv" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" text="Price" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" text="Min" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" text="Max" />
+            <Label fx:id="addPartMachineIDL" layoutX="10.0" layoutY="10.0" prefHeight="25.0" text="Machine ID" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="201.0" layoutY="34.0" prefHeight="27.0" prefWidth="200.0" spacing="25.0">
+         <children>
+            <RadioButton fx:id="addPartInHouseRB" mnemonicParsing="false" onAction="#onAddPartInHouseRB" selected="true" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="addPartOutsourcedRB" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onAddPartOutsourcedRB" text="Outsourced" toggleGroup="$toggleGroup" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="200.0" layoutY="338.0" prefHeight="27.0" prefWidth="200.0" spacing="15.0">
+         <children>
+            <Button fx:id="addPartSaveB" mnemonicParsing="false" onAction="#onAddPartSaveB" prefWidth="55.0" text="Save" />
+            <Button fx:id="addPartCancelB" layoutX="84.0" layoutY="11.0" mnemonicParsing="false" onAction="#onAddPartCancelB" prefWidth="55.0" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
